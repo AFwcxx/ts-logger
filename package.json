@@ -1,0 +1,32 @@
+{
+  "name": "ts-logger",
+  "version": "1.0.0",
+  "description": "Typescript general purpose logger.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "tsc && node dist/test.js",
+    "build:types": "tsc --project tsconfig.build.json",
+    "build:bundle": "tsc",
+    "build": "npm run build:types && npm run build:bundle",
+    "publish": "npm run build && npm pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AFwcxx/ts-logger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AFwcxx/ts-logger/issues"
+  },
+  "homepage": "https://github.com/AFwcxx/ts-logger#readme",
+  "dependencies": {
+    "@types/node": "^24.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "mongodb": "^6.14.2"
+  }
+}
