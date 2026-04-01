@@ -355,6 +355,10 @@ export class Logger {
           return false;
         }
 
+        if (value instanceof Date) {
+          return true;
+        }
+
         if (value && typeof value === "object" && !Array.isArray(value)) {
           return Object.keys(value).length > 0;
         }

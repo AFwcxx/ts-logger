@@ -198,6 +198,9 @@ class Logger {
             if (value === undefined) {
                 return false;
             }
+            if (value instanceof Date) {
+                return true;
+            }
             if (value && typeof value === "object" && !Array.isArray(value)) {
                 return Object.keys(value).length > 0;
             }
